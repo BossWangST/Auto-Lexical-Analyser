@@ -73,7 +73,7 @@ class char_token extends token_property {
     }
 }
 
-public abstract class Lexical_Analysis {
+public class Lexical_Analysis {
     ArrayList<NFA> NFAs;
     ArrayList<String> Actions;
     BufferedReader reader;
@@ -105,10 +105,11 @@ public abstract class Lexical_Analysis {
                 break;
             for(int i=0;i<NFAs.size();i++){
                 if(NFAs.get(i).recognizes(current_line)){
-
+                    // How to insert assistant functions properly?
                 }
             }
         }
+        return token_symbol;
     }
 
     public static void main(String[] args) {
