@@ -1,0 +1,239 @@
+# regular definitions
+delim    (\\s|\\t|\\n)
+ws    {delim}+
+letter    (_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)
+digit    (1|2|#|4|5|6|7|8|9|0)
+id    {letter}({letter}|{digit})*
+int_num    {digit}+
+real_num    {digit}+(\.{digit}+)?((e|E)(+|-)?{digit}+)?
+string_literal    \".*\"
+char_literal    \'.\'
+
+
+# rules
+%%
+# white space
+{ws}    %%[/* no action and no return*/%%]
+
+# reserved keywords
+auto    %%[return AUTO;%%]
+else    %%[return ELSE;%%]
+long    %%[return LONG;%%]
+switch    %%[return SWITCH;%%]
+break    %%[return BREAK;%%]
+enum    %%[return ENUM;%%]
+register    %%[return REGISTER;%%]
+typedef    %%[return TYPEDEF;%%]
+case    %%[return CASE;%%]
+extern    %%[return EXTERN;%%]
+return    %%[return RETURN;%%]
+union    %%[return UNION;%%]
+char    %%[return CHAR;%%]
+float    %%[return FLOAT;%%]
+short    %%[return SHORT;%%]
+unsigned    %%[return UNSIGNED;%%]
+const    %%[return CONST;%%]
+for    %%[return FOR;%%]
+signed    %%[return SIGNED;%%]
+void    %%[return VOID;%%]
+continue    %%[return CONTINUE;%%]
+goto    %%[return GOTO;%%]
+sizeof    %%[return SIZEOF;%%]
+volatile    %%[return VOLATILE;%%]
+volatile    %%[return VOLATILE;%%]
+default    %%[return DEFAULT;%%]
+if    %%[return IF;%%]
+static    %%[return STATIC;%%]
+while    %%[return WHILE;%%]
+do    %%[return DO;%%]
+int    %%[return INT;%%]
+struct    %%[return STRUCT;%%]
+_packed    %%[return _PACKED;%%]
+double    %%[return DOUBLE;%%]
+
+# identifier and number
+{id}    %%[value=int(installID()); return ID;%%]
+{int_num}    %%[value=int(installNum()); return INT_NUM;%%]
+{real_num}    %%[value=int(installNum()); return REAL_NUM;%%]
+{string_literal}    %%[value=int(installString()); return STRING_LITERAL;%%]
+{char_literal}    %%[value=int(installChar()); return CHAR_LITERAL;%%]
+
+# relational operator
+<    %%[value=LT; return RELOP;%%]
+<=    %%[value=LE; return RELOP;%%]
+==    %%[value=EQ; return RELOP;%%]
+!=    %%[value=NE; return RELOP;%%]
+>    %%[value=GT; return RELOP;%%]
+>=    %%[value=GE; return RELOP;%%]
+
+# arithmetical operator
++    %%[value=PLUS; return ARILOP;%%]
+-    %%[value=MINUS; return ARILOP;%%]
+*    %%[value=MULTIPLY; return ARILOP;%%]
+/    %%[value=DIVIDE; return ARILOP;%%]
+%    %%[value=MOD; return ARILOP;%%]
+
+# logical operator
+&&    %%[value=AND; return LOGOP;%%]
+||    %%[value=OR; return LOGOP;%%]
+!    %%[value=NOT; return LOGOP;%%]
+
+# bitwise operator
+<<    %%[value=LSHIFT; return BITOP;%%]
+>>    %%[value=RSHIFT; return BITOP;%%]
+&    %%[value=BITAND; return BITOP;%%]
+~    %%[value=BITNOT; return BITOP;%%]
+^    %%[value=BITXOR; return BITOP;%%]
+
+# assign operator
+=    %%[value=ASSIGN; return ASSIGNOP;%%]
++=    %%[value=ADDASSIGN; return ASSIGNOP;%%]
+-=    %%[value=MINUSASSIGN; return ASSIGNOP;%%]
+*=    %%[value=MULTIPLYASSIGN; return ASSIGNOP;%%]
+/=    %%[value=DIVIDEASSIGN; return ASSIGNOP;%%]
+%=    %%[value=MODASSIGN; return ASSIGNOP;%%]
+&=    %%[value=ANDASSIGN; return ASSIGNOP;%%]
+|=    %%[value=ORASSIGN; return ASSIGNOP;%%]
+^=    %%[value=XORASSIGN; return ASSIGNOP;%%]
+<<=    %%[value=LSHIFTASSIGN; return ASSIGNOP;%%]
+>>=    %%[value=RSHIFTASSIGN; return ASSIGNOP;%%]
+
+# punctuation
+\(    %%[return LP;%%]
+\)    %%[return RP;%%]
+\[    %%[return LSBR;%%]
+\]    %%[return RSBR;%%]
+\{    %%[return LBR;%%]
+\}    %%[return RBR;%%]
+\,    %%[return COMMA;%%]
+\;    %%[return SEMICOLON;%%]
+
+%%
+
+#reserved words
+#No.0-99
+final int AUTO = 0;
+final int ELSE = 1;
+final int LONG = 2;
+final int SWITCH = 3;
+final int BREAK = 4;
+final int ENUM = 5;
+final int REGISTER = 6;
+final int TYPEDEF = 7;
+final int CASE = 8;
+final int EXTERN = 9;
+final int RETURN = 10;
+final int UNION = 11;
+final int CHAR = 12;
+final int FLOAT = 13;
+final int SHORT = 14;
+final int UNSIGNED = 15;
+final int CONST = 16;
+final int FOR = 17;
+final int SIGNED = 18;
+final int VOID = 19;
+final int CONTINUE = 20;
+final int GOTO = 21;
+final int SIZEOF = 22;
+final int VOLATILE = 23;
+final int DEFAULT = 24;
+final int IF = 25;
+final int STATIC = 26;
+final int WHILE = 27;
+final int DO = 28;
+final int INT = 29;
+final int STRUCT = 30;
+final int _PACKED = 31;
+final int DOUBLE = 32;
+
+#identifier
+#No.100-199
+final int ID = 100;
+
+#constant
+#No.200-299
+#number
+final int INT_NUM = 200;
+final int REAL_NUM = 201;
+#string char literals
+final int STRING_LITERAL = 202;
+final int CHAR_LITERAL = 203;
+
+
+#operator
+#No.300-399
+#relational operator
+final int RELOP = 300;
+# <
+final int LT = 0;
+# <=
+final int LE = 1;
+# ==
+final int EQ = 2;
+# !=
+final int NE = 3;
+# >
+final int GT = 4;
+# >=
+final int GE = 5;
+
+#arithmetical operator
+final int ARILOP = 301;
+final int PLUS = 0;
+final int MINUS = 1;
+final int MULTIPLY = 2;
+final int DIVIDE = 3;
+final int MOD = 4;
+
+#logical operator
+final int LOGOP = 302;
+final int AND = 0;
+final int OR = 1;
+final int NOT = 2;
+
+#bitwise operator
+final int BITOP = 303;
+final int LSHIFT = 0;
+final int RSHIFT = 1;
+final int BITAND = 2;
+final int BITOR = 3;
+final int BITNOT = 4;
+final int BITXOR = 5;
+
+#assign operator
+final int ASSIGNOP = 304;
+final int ASSIGN = 1;
+final int ADDASSIGN = 2;
+final int MINUSASSIGN = 3;
+final int MULTIPLYASSIGN = 4;
+final int DIVIDEASSIGN = 5;
+final int MODASSIGN = 6;
+final int ANDASSIGN = 7;
+final int ORASSIGN = 8;
+final int XORASSIGN = 10;
+final int LSHIFTASSIGN = 11;
+final int RSHIFTASSIGN = 12;
+
+#punctuation
+#No.400-499
+#left parenthesis (
+final int LP = 400;
+#right parenthesis )
+final int RP = 401;
+#left squared bracket [
+final int LSBR = 402;
+#right squared bracket ]
+final int RSBR = 403;
+#left brace {
+final int LBR = 404;
+#right brace }
+final int RBR = 405;
+# ,
+final int COMMA = 406;
+# ;
+final int SEMICOLON = 407;
+
+public int installID() {
+    symbols.add(new id_token(Line, value));
+}
+
