@@ -5,25 +5,30 @@ public class NFA implements Serializable {
 
     private Digraph graph;     // digraph of epsilon transitions
     private String regexp;     // regular expression
-    private final int m;       // number of characters in regular expression
+    private int m;       // number of characters in regular expression
     int len; // [start,len) satisfies the rule!
 
-    public int getLen(){
+    public int getLen() {
         return len;
     }
+
     /**
      * Initializes the NFA from the specified regular expression.
      *
-     * @param regexp the regular expression
+     * @param regex the regular expression
      */
-    public NFA(String regexp) {
-        this.regexp = regexp;
+    public NFA(String regex) {
+        this.regexp = regex.replaceAll("\\\\", "`");
         m = regexp.length();
         Stack<Integer> ops = new Stack<Integer>();
         graph = new Digraph(m + 1);
         for (int i = 0; i < m; i++) {
             int lp = i;
-            if (regexp.charAt(i) == '(' || regexp.charAt(i) == '|')
+            if (i < m - 2 && regexp.charAt(i) == '`' && regexp.charAt(i + 1) == '`') {
+                regexp=regexp.substring(0,i)+regexp.substring(i+2,m);
+                m-=2;
+                continue;
+            } else if (regexp.charAt(i) == '(' || regexp.charAt(i) == '|')
                 ops.push(i);
             else if (regexp.charAt(i) == ')') {
                 int or = ops.pop();
@@ -65,7 +70,7 @@ public class NFA implements Serializable {
 
         // Compute possible NFA states for txt[i+1]
         for (int i = 0; i < txt.length(); i++) {
-            if (txt.charAt(i) == '*' || txt.charAt(i) == '|' || txt.charAt(i) == '(' || txt.charAt(i) == ')')
+            if (txt.charAt(i) == '*' || txt.charAt(i) == '|')// || txt.charAt(i) == '(' || txt.charAt(i) == ')')
                 throw new IllegalArgumentException("text contains the metacharacter '" + txt.charAt(i) + "'");
 
             Bag<Integer> match = new Bag<Integer>();
@@ -104,7 +109,7 @@ public class NFA implements Serializable {
         NFA nfa = new NFA(regexp2);
         System.out.println(nfa.recognizes(txt2));
         */
-        var nfa = new NFA("(ab*a*|c)");
+        var nfa = new NFA("(\\\\(\\\\)\\\\(\\\\(\\\\))");
         try {
             var fos = new FileOutputStream("nfa_test.dat");
             var oos = new ObjectOutputStream(fos);
@@ -113,7 +118,7 @@ public class NFA implements Serializable {
             var fis = new FileInputStream("nfa_test.dat");
             var ios = new ObjectInputStream(fis);
             var nfa_read = (NFA) ios.readObject();
-            System.out.println(nfa_read.recognizes("abaaaba"));
+            System.out.println(nfa_read.recognizes("()(())")+"\n"+Integer.toString(nfa_read.len));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
