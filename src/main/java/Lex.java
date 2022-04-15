@@ -83,9 +83,8 @@ public class Lex {
         var oos = new ObjectOutputStream(fos);
         var NFAs = new ArrayList<NFA>();
         // save all the NFAs to the serialized file
-        int i = 0;
         for (regular regex : token_list) {
-            NFAs.add(new NFA("(" + regex.regexp + ")"));
+            NFAs.add(new NFA(regex.regexp));
             actions.add(regex.action);
         }
         NFA_list nfa_list = new NFA_list();
@@ -135,7 +134,7 @@ public class Lex {
         }
         // now ruleAction[0] is a Regex, and ruleAction[1] is the action
         token_list.add(new regular(ruleAction[0], ruleAction[1].substring(3, ruleAction[1].length() - 3)));
-        System.out.println(ruleAction[0] + " " + ruleAction[1]);
+        //System.out.println(ruleAction[0] + " " + ruleAction[1]);
     }
 
     public void regular_definition_lex(String current_line, HashMap<String, String> regular_map, Pattern pattern) {
@@ -146,8 +145,9 @@ public class Lex {
             String current_group = matcher_def.group();
             definition[1] = definition[1].replace(current_group, regular_map.get(current_group.substring(1, current_group.length() - 1)));
         }
+        definition[1] = definition[1].replaceAll("\\((.*)(\\|(.*))*\\)\\*", "($1*|$2*)");
         regular_map.put(definition[0], definition[1]);
-        System.out.println(definition[0] + " " + definition[1]);
+        //System.out.println(definition[0] + " " + definition[1]);
         return;
     }
 
