@@ -7,28 +7,39 @@ class Token_Sequence {
     public Token_Sequence() {
         tokens = new ArrayList<token>();
     }
+
+    public String toString() {
+        String res = "";
+        for (token t : tokens) {
+            if (t instanceof id_token) {
+                res += "<" + Integer.toString(t.type) + "," + ((id_token) t).value + "," + Integer.toString(t.line) + ">\n";
+            } else if (t instanceof int_token) {
+                res += "<" + Integer.toString(t.type) + "," + Integer.toString(((int_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+            } else if (t instanceof real_token) {
+                res += "<" + Integer.toString(t.type) + "," + Double.toString(((real_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+            } else if (t instanceof op_token) {
+                res += "<" + Integer.toString(t.type) + "," + Integer.toString(((op_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+            } else if (t instanceof string_token) {
+                res += "<" + Integer.toString(t.type) + "," + ((string_token) t).value + "," + Integer.toString(t.line) + ">\n";
+            } else if (t instanceof char_token) {
+                res += "<" + Integer.toString(t.type) + "," + Character.toString(((char_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+            } else {
+                res += "<" + Integer.toString(t.type) + "," + Integer.toString(t.line) + ">\n";
+            }
+        }
+        return res;
+    }
 }
 
 class token {
     int type;
-    token_property tp = null;
-
-    token(int t) {
-        this.type = t;
-    }
-
-    token(int t, int l) {
-        this(t);
-        this.tp = new token_property(l);
-    }
-}
-
-class token_property {
     int line;
 
-    token_property(int l) {
+    token(int t, int l) {
+        this.type = t;
         this.line = l;
     }
+
 }
 
 class id_token extends token {
@@ -92,7 +103,6 @@ public class Lexical_Analysis {
 
     // %% Here put the assistant definitions and functions
 
-    // %% Here put the main functions
     public void get_NFAs() throws IOException, ClassNotFoundException {
         var fis = new FileInputStream("NFAs.dat");
         var ois = new ObjectInputStream(fis);
@@ -115,12 +125,16 @@ public class Lexical_Analysis {
         for (; ; line++) {
             current_line = reader.readLine();
             if (current_line == null) break;
-            for (int i = 0; i < NFAs.size(); i++) {
-                if (NFAs.get(i).recognizes(current_line)) {
-                    String token_value = current_line.substring(0, NFAs.get(i).getLen());
-                    //%% Here insert assistant functions, OK!
+            while (!current_line.equals(""))
+                for (int i = 0; i < NFAs.size(); i++) {
+                    if (NFAs.get(i).recognizes(current_line)) {
+                        int len = NFAs.get(i).getLen();
+                        String token_value = current_line.substring(0, len);
+                        current_line = current_line.substring(len, current_line.length());
+                        //%% Here insert assistant functions, OK!
+
+                    }
                 }
-            }
         }
         return token_sequence;
     }
@@ -129,8 +143,11 @@ public class Lexical_Analysis {
         try {
             var reader = new BufferedReader(new InputStreamReader(new FileInputStream(args[0])));
             var lexical = new Lexical_Analysis(reader);
-            //var token_symbol=lexical.scanner();
+            var token_symbol = lexical.scanner();
+            System.out.println(token_symbol.toString());
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

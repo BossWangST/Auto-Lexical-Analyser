@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Bag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Digraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DirectedDFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NFA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NFA_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NFAs.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nfa_test.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Bag$LinkedIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Bag$Node.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Bag.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Digraph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/DirectedDFS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/NFA.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/NFA_list.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/NFAs.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Token_Sequence.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/char_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/id_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/int_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/op_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/real_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/string_token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/NFA_list.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/java/testcase.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFAs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../NFAs.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nfa_test.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../nfa_test.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Lex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/NFA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/lex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/lex.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Lex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/NFA_list.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA_list.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/char_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/char_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/id_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/id_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/int_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/int_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/op_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/op_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/real_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/real_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/regular.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/regular.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/string_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/string_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/token_property.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27saQqH4GLyuKKaZ7xz4NbXskQe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/target/classes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Lexical_Analysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lexical_Analysis" />
+      <module name="lex_test" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/target/classes/test.c" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Lexical_Analysis" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="" />
+      <created>1650111236076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650111236076</updated>
+      <workItem from="1650111237279" duration="8776000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Lexical_Analysis.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Lexical_Analysis.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Lexical_Analysis.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="NFAs.get(i).regexp" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
