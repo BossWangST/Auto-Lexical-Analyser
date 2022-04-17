@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bag$LinkedIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bag$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Bag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Digraph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Digraph.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DirectedDFS.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DirectedDFS.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lexical_Analysis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lexical_Analysis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NFA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NFA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NFA_list.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NFA_list.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Token_Sequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../char_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../id_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../int_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../op_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../real_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../string_token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../token.class" beforeDir="false" />
-    </list>
+    <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
