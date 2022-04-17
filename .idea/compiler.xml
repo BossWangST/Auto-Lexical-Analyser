@@ -9,5 +9,8 @@
         <module name="lex" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lex" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

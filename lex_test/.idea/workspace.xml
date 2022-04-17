@@ -5,63 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Bag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Digraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DirectedDFS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NFA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NFA_list.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NFAs.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nfa_test.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Bag$LinkedIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Bag$Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Bag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Digraph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/DirectedDFS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/NFA.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/NFA_list.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/NFAs.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Token_Sequence.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/char_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/id_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/int_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/op_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/real_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/string_token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/test.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/token.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/NFA_list.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/testcase.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NFAs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../NFAs.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nfa_test.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../nfa_test.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/Lex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/NFA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/lex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/lex.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Lex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/NFA_list.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA_list.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/char_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/char_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/id_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/id_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/int_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/int_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/op_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/op_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/real_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/real_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/regular.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/regular.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/string_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/string_token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/token_property.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bag$LinkedIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bag$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Digraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Digraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DirectedDFS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DirectedDFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lexical_Analysis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lexical_Analysis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA_list.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NFA_list.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Token_Sequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../char_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../id_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../int_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../op_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../real_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../string_token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../token.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650111236076</updated>
-      <workItem from="1650111237279" duration="8776000" />
+      <workItem from="1650111237279" duration="9561000" />
     </task>
     <servers />
   </component>
