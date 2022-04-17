@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
@@ -14,27 +15,10 @@ class regular {
     }
 }
 
-class NFA_list implements Serializable {
-    ArrayList<NFA> NFAs;
-    ArrayList<String> actions;
-
-    public void setNFAs(ArrayList<NFA> nfas, ArrayList<String> actions) {
-        this.NFAs = nfas;
-        this.actions = actions;
-    }
-
-    public ArrayList<NFA> getNFAs() {
-        return NFAs;
-    }
-
-    public ArrayList<String> getActions() {
-        return actions;
-    }
-}
 
 public class Lex {
 
-    String assistant;
+    String assistant = "";
     ArrayList<regular> token_list;
 
     Lex(BufferedReader reader) throws IOException {
@@ -46,7 +30,7 @@ public class Lex {
         //String assistant="";
 
         int part = 0;// 0 - regular definition  1 - rule and action  2 - assistant sentence
-        var pattern = Pattern.compile("\\{.*?\\}");
+        var pattern = Pattern.compile("\\{\\{.*?\\}\\}");
         for (; ; ) {
             current_line = reader.readLine();
             if (null == current_line)
@@ -54,6 +38,7 @@ public class Lex {
             if (current_line.equals(""))
                 continue;
             // begin to process the line!
+            if (current_line.charAt(0) == '#') continue;
             if (current_line.charAt(0) == '%' && current_line.charAt(1) == '%') {
                 part++;
                 continue;
@@ -69,8 +54,6 @@ public class Lex {
                     break;
                 case 2:
                     // assistant function part:
-                    if (current_line.charAt(0) == '#')
-                        continue;
                     assistant += current_line + "\n";
                     break;
             }
@@ -79,7 +62,7 @@ public class Lex {
         //NFA[] NFAs = new NFA[token_list.size()];
         var actions = new ArrayList<String>();
         //String [] actions=new String[token_list.size()];
-        var fos = new FileOutputStream("NFAs.dat");
+        var fos = new FileOutputStream("./lex_test/target/classes/NFAs.dat");
         var oos = new ObjectOutputStream(fos);
         var NFAs = new ArrayList<NFA>();
         // save all the NFAs to the serialized file
@@ -95,42 +78,51 @@ public class Lex {
     }
 
     public void generate_source_code() throws IOException {
-        var reader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/mac/Documents/University/Compilers/lex/src/main/java/Code_template.java")));
+        var reader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/mac/Documents/University/Compilers/lex/src/main/java/Lexical_Analysis.java")));
         String source_code = "";
         String current_line;
         int part = 0;
+        boolean assistant_func = false;
+        boolean action_func = false;
         for (; ; ) {
             current_line = reader.readLine();
             if (current_line == null)
                 break;
             source_code += current_line + "\n";
             if (current_line.contains("%%")) {
-                switch (part) {
-                    case 0:
+                part++;
+            }
+            switch (part) {
+                case 1:
+                    if (!assistant_func) {
                         source_code += assistant;
-                        part++;
-                        break;
-                    case 1:
+                        assistant_func = true;
+                    }
+                    break;
+                case 2:
+                    if (!action_func) {
                         for (int i = 0; i < token_list.size(); i++) {
                             source_code += token_list.get(i).action + "\n";
                         }
-                        break;
-                }
+                        action_func = true;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
-        var fos = new FileOutputStream("Lexical_Analyser.java");
+        var fos = new FileOutputStream("./lex_test/src/main/java/Lexical_Analysis.java");
         fos.write(source_code.getBytes(StandardCharsets.UTF_8));
         fos.close();
     }
 
     public void rule_action_lex(String current_line, ArrayList<regular> token_list, HashMap<String, String> regular_map, Pattern pattern) {
 
-        if (current_line.charAt(0) == '#') return;
         String[] ruleAction = current_line.split("\s+", 2);
         var matcher_token = pattern.matcher(current_line);
         while (matcher_token.find()) {
             String current_group = matcher_token.group();
-            ruleAction[0] = ruleAction[0].replace(current_group, regular_map.get(current_group.substring(1, current_group.length() - 1)));
+            ruleAction[0] = ruleAction[0].replace(current_group, regular_map.get(current_group.substring(2, current_group.length() - 2)));
         }
         // now ruleAction[0] is a Regex, and ruleAction[1] is the action
         token_list.add(new regular(ruleAction[0], ruleAction[1].substring(3, ruleAction[1].length() - 3)));
@@ -138,23 +130,46 @@ public class Lex {
     }
 
     public void regular_definition_lex(String current_line, HashMap<String, String> regular_map, Pattern pattern) {
-        if (current_line.charAt(0) == '#') return;
         String[] definition = current_line.split("\s+", 2);
         var matcher_def = pattern.matcher(current_line);
         while (matcher_def.find()) {
             String current_group = matcher_def.group();
-            definition[1] = definition[1].replace(current_group, regular_map.get(current_group.substring(1, current_group.length() - 1)));
+            definition[1] = definition[1].replace(current_group, regular_map.get(current_group.substring(2, current_group.length() - 2)));
         }
-        definition[1] = definition[1].replaceAll("\\((.*)(\\|(.*))*\\)\\*", "($1*|$2*)");
         regular_map.put(definition[0], definition[1]);
         //System.out.println(definition[0] + " " + definition[1]);
         return;
+    }
+
+    public static void copy(String source, String target) throws IOException {
+        try (
+                InputStream input = new FileInputStream(new File(source));
+                OutputStream output = new FileOutputStream(new File(target));
+        ) {
+            byte[] buffer = new byte[8];
+            for (; ; ) {
+                int n;
+                if ((n = input.read(buffer)) == -1)
+                    break;
+                output.write(Arrays.copyOf(buffer, n));
+            }
+            output.flush();
+        }
+    }
+
+
+    public void generate_assistantClasses() throws IOException {
+        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/NFA.java", "./lex_test/src/main/java/NFA.java");
+        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/Bag.java", "./lex_test/src/main/java/Bag.java");
+        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/Digraph.java", "./lex_test/src/main/java/Digraph.java");
+        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/DirectedDFS.java", "./lex_test/src/main/java/DirectedDFS.java");
     }
 
     public static void main(String[] args) {
         try (var reader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/mac/Documents/University/Compilers/lex/src/main/java/lex.txt"), "UTF-8"))) {
             var lex = new Lex(reader);
             lex.generate_source_code();
+            lex.generate_assistantClasses();
         } catch (IOException e) {
             e.printStackTrace();
         }
