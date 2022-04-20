@@ -104,7 +104,7 @@ public class Lexical_Analysis {
     // %% Here put the assistant definitions and functions
 
     public void get_NFAs() throws IOException, ClassNotFoundException {
-        var fis = new FileInputStream("NFAs.dat");
+        var fis = new FileInputStream("./src/main/java/NFAs.dat");
         var ois = new ObjectInputStream(fis);
         var nfa_list = (NFA_list) ois.readObject();
         NFAs = nfa_list.getNFAs();
