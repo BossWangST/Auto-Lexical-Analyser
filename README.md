@@ -24,6 +24,6 @@ Tip:Here the `Lexical_Analysis.java` will appear in the `/lex_test/src/main/java
 ## Step 3
 Compile `Lexical_Analysis.java` and run it, it will give you a sequence of Tokens.
 
-##FAQ
+## FAQ
 If your OS is Windows, you need to change the file path format to something like `\\lex_text\\src\\main\\java`
 then you can compile and run the Lexical Analyser.
