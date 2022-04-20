@@ -85,8 +85,8 @@ public class NFA implements Serializable {
 
         // Compute possible NFA states for txt[i+1]
         for (int i = 0; i < txt.length(); i++) {
-            if (txt.charAt(i) == '*' || txt.charAt(i) == '|')// || txt.charAt(i) == '(' || txt.charAt(i) == ')')
-                throw new IllegalArgumentException("text contains the metacharacter '" + txt.charAt(i) + "'");
+            //if (txt.charAt(i) == '*' || txt.charAt(i) == '|')// || txt.charAt(i) == '(' || txt.charAt(i) == ')')
+            //    throw new IllegalArgumentException("text contains the metacharacter '" + txt.charAt(i) + "'");
             if (i > 0 && (txt.charAt(i) == '(' || txt.charAt(i) == ')'))
                 break;
 
@@ -95,6 +95,8 @@ public class NFA implements Serializable {
             for (int v : pc) {
                 if (v == m) continue;
                 if ((regexp.charAt(v) == txt.charAt(i))) {
+                    if (i > 0 && regexp.charAt(v) == '*')
+                        continue;
                     if (!matched) {
                         matched = true;
                         len++;
@@ -137,12 +139,12 @@ public class NFA implements Serializable {
         */
         //var nfa = new NFA("(\\\\(\\\\)\\\\(\\\\(\\\\))");
         //var nfa = new NFA("(a|b|c)(1|2|3|a|b|c)*");
-        var nfa = new NFA("(_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)((_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)|(1|2|3|4|5|6|7|8|9|0))*");
+        //var nfa = new NFA("(_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)((_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)|(1|2|3|4|5|6|7|8|9|0))*");
         //var nfa=new NFA("\\\\\"(( |    )( |    )*|(_|q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|Q|W|E|R|T|Y|U|I|O|P|A|S|D|F|G|H|J|K|L|Z|X|C|V|B|N|M)|(1|2|3|4|5|6|7|8|9|0)|(~|!|@|#|$|%|^|&|*|\\\\(|\\\\)|_|+|-|=|,|.|<|>|?|/|[|]|:|;|\\\\{|\\\\}\\\\\\))*\\\\\"");
         //var nfa=new NFA("\\\\\"(m|a)(a|i|n|\\\\\\)*\\\\\"");
         //var nfa=new NFA("\\\\\\n");
-        //var nfa = new NFA(";");
-        //var nfa = new NFA("(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*(|.(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)(((e|E)((+|-)|)(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)|)");
+        //var nfa = new NFA("(1|2)\\\\*(3|4)");
+        var nfa = new NFA("(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*(|.(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)(((e|E)((+|-)|)(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)|)");
         try {
             var fos = new FileOutputStream("nfa_test.dat");
             var oos = new ObjectOutputStream(fos);
@@ -151,7 +153,7 @@ public class NFA implements Serializable {
             var fis = new FileInputStream("nfa_test.dat");
             var ios = new ObjectInputStream(fis);
             var nfa_read = (NFA) ios.readObject();
-            System.out.println(nfa_read.recognizes("a)") + "\n" + Integer.toString(nfa_read.len));
+            System.out.println(nfa_read.recognizes("1*3") + "\n" + Integer.toString(nfa_read.len));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
