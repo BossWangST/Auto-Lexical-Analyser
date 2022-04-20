@@ -62,7 +62,7 @@ public class Lex {
         //NFA[] NFAs = new NFA[token_list.size()];
         var actions = new ArrayList<String>();
         //String [] actions=new String[token_list.size()];
-        var fos = new FileOutputStream("./lex_test/src/main/java/NFAs.dat");
+        var fos = new FileOutputStream("./lex_test/NFAs.dat");
         var oos = new ObjectOutputStream(fos);
         var NFAs = new ArrayList<NFA>();
         // save all the NFAs to the serialized file
