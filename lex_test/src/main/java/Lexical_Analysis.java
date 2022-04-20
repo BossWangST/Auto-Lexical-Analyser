@@ -189,7 +189,7 @@ final int MACRO = 8;
 final int DOT = 9;
 
     public void get_NFAs() throws IOException, ClassNotFoundException {
-        var fis = new FileInputStream("/Users/mac/Documents/University/Compilers/lex/lex_test/target/classes/NFAs.dat");
+        var fis = new FileInputStream("./src/main/java/NFAs.dat");
         var ois = new ObjectInputStream(fis);
         var nfa_list = (NFA_list) ois.readObject();
         NFAs = nfa_list.getNFAs();

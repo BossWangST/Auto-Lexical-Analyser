@@ -62,7 +62,7 @@ public class Lex {
         //NFA[] NFAs = new NFA[token_list.size()];
         var actions = new ArrayList<String>();
         //String [] actions=new String[token_list.size()];
-        var fos = new FileOutputStream("./lex_test/target/classes/NFAs.dat");
+        var fos = new FileOutputStream("./lex_test/src/main/java/NFAs.dat");
         var oos = new ObjectOutputStream(fos);
         var NFAs = new ArrayList<NFA>();
         // save all the NFAs to the serialized file
@@ -78,7 +78,7 @@ public class Lex {
     }
 
     public void generate_source_code() throws IOException {
-        var reader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/mac/Documents/University/Compilers/lex/src/main/java/Lexical_Analysis.java")));
+        var reader = new BufferedReader(new InputStreamReader(new FileInputStream("./src/main/java/Lexical_Analysis.java")));
         String source_code = "";
         String current_line;
         int part = 0;
@@ -159,14 +159,14 @@ public class Lex {
 
 
     public void generate_assistantClasses() throws IOException {
-        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/NFA.java", "./lex_test/src/main/java/NFA.java");
-        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/Bag.java", "./lex_test/src/main/java/Bag.java");
-        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/Digraph.java", "./lex_test/src/main/java/Digraph.java");
-        copy("/Users/mac/Documents/University/Compilers/lex/src/main/java/DirectedDFS.java", "./lex_test/src/main/java/DirectedDFS.java");
+        copy("./src/main/java/NFA.java", "./lex_test/src/main/java/NFA.java");
+        copy("./src/main/java/Bag.java", "./lex_test/src/main/java/Bag.java");
+        copy("./src/main/java/Digraph.java", "./lex_test/src/main/java/Digraph.java");
+        copy("./src/main/java/DirectedDFS.java", "./lex_test/src/main/java/DirectedDFS.java");
     }
 
     public static void main(String[] args) {
-        try (var reader = new BufferedReader(new InputStreamReader(new FileInputStream("/Users/mac/Documents/University/Compilers/lex/src/main/java/lex.txt"), "UTF-8"))) {
+        try (var reader = new BufferedReader(new InputStreamReader(new FileInputStream("./src/main/java/lex.txt"), "UTF-8"))) {
             var lex = new Lex(reader);
             lex.generate_source_code();
             lex.generate_assistantClasses();
