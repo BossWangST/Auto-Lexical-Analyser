@@ -22,7 +22,7 @@ class Token_Sequence {
             } else if (t instanceof string_token) {
                 res += "<" + Integer.toString(t.type) + "," + ((string_token) t).value + "," + Integer.toString(t.line) + ">\n";
             } else if (t instanceof char_token) {
-                res += "<" + Integer.toString(t.type) + "," + Character.toString(((char_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+                res += "<" + Integer.toString(t.type) + "," + ((char_token) t).value + "," + Integer.toString(t.line) + ">\n";
             } else {
                 res += "<" + Integer.toString(t.type) + "," + Integer.toString(t.line) + ">\n";
             }
@@ -88,11 +88,11 @@ class string_token extends token {
 }
 
 class char_token extends token {
-    char value;
+    String value;
 
     char_token(int t, int l, String v) {
         super(t, l);
-        this.value = v.charAt(0);
+        this.value = v;
     }
 }
 
@@ -130,11 +130,11 @@ final int DEFAULT = 24;
 final int IF = 25;
 final int STATIC = 26;
 final int WHILE = 27;
-final int DO = 28;
+final int DOUBLE = 28;
 final int INT = 29;
 final int STRUCT = 30;
 final int _PACKED = 31;
-final int DOUBLE = 32;
+final int DO = 32;
 final int ID = 100;
 final int INT_NUM = 200;
 final int REAL_NUM = 201;
@@ -247,14 +247,14 @@ else if((i-1)==25) {token_sequence.tokens.add(new token(DEFAULT,line));break;}
 else if((i-1)==26) {token_sequence.tokens.add(new token(IF,line));break;}
 else if((i-1)==27) {token_sequence.tokens.add(new token(STATIC,line));break;}
 else if((i-1)==28) {token_sequence.tokens.add(new token(WHILE,line));break;}
-else if((i-1)==29) {token_sequence.tokens.add(new token(DO,line));break;}
+else if((i-1)==29) {token_sequence.tokens.add(new token(DOUBLE,line));break;}
 else if((i-1)==30) {token_sequence.tokens.add(new token(INT,line));break;}
 else if((i-1)==31) {token_sequence.tokens.add(new token(STRUCT,line));break;}
 else if((i-1)==32) {token_sequence.tokens.add(new token(_PACKED,line));break;}
-else if((i-1)==33) {token_sequence.tokens.add(new token(DOUBLE,line));break;}
+else if((i-1)==33) {token_sequence.tokens.add(new token(DO,line));break;}
 else if((i-1)==34) {token_sequence.tokens.add(new id_token(ID,line,token_value));break;}
-else if((i-1)==35) {token_sequence.tokens.add(new int_token(INT_NUM,line,token_value));break;}
-else if((i-1)==36) {token_sequence.tokens.add(new real_token(REAL_NUM,line,token_value));break;}
+else if((i-1)==35) {token_sequence.tokens.add(new real_token(REAL_NUM,line,token_value));break;}
+else if((i-1)==36) {token_sequence.tokens.add(new int_token(INT_NUM,line,token_value));break;}
 else if((i-1)==37) {token_sequence.tokens.add(new string_token(STRING_LITERAL,line,token_value));break;}
 else if((i-1)==38) {token_sequence.tokens.add(new char_token(CHAR_LITERAL,line,token_value));break;}
 else if((i-1)==39) {token_sequence.tokens.add(new op_token(RELOP,line,LT));break;}

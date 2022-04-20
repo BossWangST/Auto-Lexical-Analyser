@@ -22,7 +22,7 @@ class Token_Sequence {
             } else if (t instanceof string_token) {
                 res += "<" + Integer.toString(t.type) + "," + ((string_token) t).value + "," + Integer.toString(t.line) + ">\n";
             } else if (t instanceof char_token) {
-                res += "<" + Integer.toString(t.type) + "," + Character.toString(((char_token) t).value) + "," + Integer.toString(t.line) + ">\n";
+                res += "<" + Integer.toString(t.type) + "," + ((char_token) t).value + "," + Integer.toString(t.line) + ">\n";
             } else {
                 res += "<" + Integer.toString(t.type) + "," + Integer.toString(t.line) + ">\n";
             }
@@ -88,11 +88,11 @@ class string_token extends token {
 }
 
 class char_token extends token {
-    char value;
+    String value;
 
     char_token(int t, int l, String v) {
         super(t, l);
-        this.value = v.charAt(0);
+        this.value = v;
     }
 }
 

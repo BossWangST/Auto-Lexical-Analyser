@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="" />
+    <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NFA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/NFAs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NFAs.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NFA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Token_Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Token_Sequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/char_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/char_token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nfa_test.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../nfa_test.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/NFA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/lex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/lex.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Token_Sequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/classes/char_token.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/char_token.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650111236076</updated>
       <workItem from="1650111237279" duration="9561000" />
+      <workItem from="1650420543223" duration="1643000" />
     </task>
     <servers />
   </component>
