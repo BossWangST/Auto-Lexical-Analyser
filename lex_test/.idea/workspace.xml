@@ -10,25 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45a34a4b-f504-4e22-bb7a-3139080a0141" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/lex_test_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NFAs.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../编译原理 19190204王宇豪 词法分析自动生成.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../词法分析自动生成器演示.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NFA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NFA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NFAs.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nfa_test.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../nfa_test.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/Lex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Lexical_Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/NFA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Lex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/Lexical_Analysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../编译原理 19190204王宇豪 词法分析自动生成.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../词法分析自动生成器演示.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

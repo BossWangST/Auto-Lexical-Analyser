@@ -114,6 +114,7 @@ do    %%[else if((i-1)==33) {token_sequence.tokens.add(new token(DO,line));break
 ;    %%[else if((i-1)==77) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,SEMICOLON));break;}%%]
 \\#    %%[else if((i-1)==78) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,MACRO));break;}%%]
 .    %%[else if((i-1)==79) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,DOT));break;}%%]
+:    %%[else if((i-1)==80) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,COLON));break;}%%]
 %%
 
 #reserved words
@@ -243,6 +244,8 @@ final int SEMICOLON = 7;
 final int MACRO = 8;
 # .
 final int DOT = 9;
+# :
+final int COLON = 10;
 
 #public int install(int type,int line,Token_Sequence token_sequence){
 #    token_sequence.tokens.add(new token(type,line));
