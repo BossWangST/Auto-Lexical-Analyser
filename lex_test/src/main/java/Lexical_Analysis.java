@@ -187,6 +187,7 @@ final int COMMA = 6;
 final int SEMICOLON = 7;
 final int MACRO = 8;
 final int DOT = 9;
+final int COLON = 10;
 
     public void get_NFAs() throws IOException, ClassNotFoundException {
         var fis = new FileInputStream("NFAs.dat");
@@ -298,6 +299,7 @@ else if((i-1)==76) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,COMM
 else if((i-1)==77) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,SEMICOLON));break;}
 else if((i-1)==78) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,MACRO));break;}
 else if((i-1)==79) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,DOT));break;}
+else if((i-1)==80) {token_sequence.tokens.add(new op_token(PUNCTUATION,line,COLON));break;}
 
                     }
                 }
