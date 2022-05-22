@@ -3,13 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/lex_test_jar</output-path>
     <root id="archive" name="lex_test.jar">
       <element id="module-output" name="lex_test" />
-      <element id="directory" name="src">
-        <element id="directory" name="main">
-          <element id="directory" name="java">
-            <element id="file-copy" path="$PROJECT_DIR$/src/main/java/NFAs.dat" />
-          </element>
-        </element>
-      </element>
     </root>
   </artifact>
 </component>
