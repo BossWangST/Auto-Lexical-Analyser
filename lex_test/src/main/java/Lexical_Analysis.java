@@ -147,24 +147,24 @@ final int EQ = 2;
 final int NE = 3;
 final int GT = 4;
 final int GE = 5;
-final int ARILOP = 301;
+final int ARIOP = 306;
 final int PLUS = 0;
 final int MINUS = 1;
 final int MULTIPLY = 2;
 final int DIVIDE = 3;
 final int MOD = 4;
-final int LOGOP = 302;
+final int LOGOP = 311;
 final int AND = 0;
 final int OR = 1;
 final int NOT = 2;
-final int BITOP = 303;
+final int BITOP = 314;
 final int LSHIFT = 0;
 final int RSHIFT = 1;
 final int BITAND = 2;
 final int BITOR = 3;
 final int BITNOT = 4;
 final int BITXOR = 5;
-final int ASSIGNOP = 304;
+final int ASSIGNOP = 320;
 final int ASSIGN = 1;
 final int ADDASSIGN = 2;
 final int MINUSASSIGN = 3;
@@ -264,11 +264,11 @@ else if((i-1)==41) {token_sequence.tokens.add(new op_token(RELOP,line,EQ));break
 else if((i-1)==42) {token_sequence.tokens.add(new op_token(RELOP,line,NE));break;}
 else if((i-1)==43) {token_sequence.tokens.add(new op_token(RELOP,line,GT));break;}
 else if((i-1)==44) {token_sequence.tokens.add(new op_token(RELOP,line,GE));break;}
-else if((i-1)==45) {token_sequence.tokens.add(new op_token(ARILOP,line,PLUS));break;}
-else if((i-1)==46) {token_sequence.tokens.add(new op_token(ARILOP,line,MINUS));break;}
-else if((i-1)==47) {token_sequence.tokens.add(new op_token(ARILOP,line,MULTIPLY));break;}
-else if((i-1)==48) {token_sequence.tokens.add(new op_token(ARILOP,line,DIVIDE));break;}
-else if((i-1)==49) {token_sequence.tokens.add(new op_token(ARILOP,line,MOD));break;}
+else if((i-1)==45) {token_sequence.tokens.add(new op_token(ARIOP,line,PLUS));break;}
+else if((i-1)==46) {token_sequence.tokens.add(new op_token(ARIOP,line,MINUS));break;}
+else if((i-1)==47) {token_sequence.tokens.add(new op_token(ARIOP,line,MULTIPLY));break;}
+else if((i-1)==48) {token_sequence.tokens.add(new op_token(ARIOP,line,DIVIDE));break;}
+else if((i-1)==49) {token_sequence.tokens.add(new op_token(ARIOP,line,MOD));break;}
 else if((i-1)==50) {token_sequence.tokens.add(new op_token(LOGOP,line,AND));break;}
 else if((i-1)==51) {token_sequence.tokens.add(new op_token(LOGOP,line,OR));break;}
 else if((i-1)==52) {token_sequence.tokens.add(new op_token(LOGOP,line,NOT));break;}

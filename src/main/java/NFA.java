@@ -153,7 +153,7 @@ public class NFA implements Serializable {
             var fis = new FileInputStream("nfa_test.dat");
             var ios = new ObjectInputStream(fis);
             var nfa_read = (NFA) ios.readObject();
-            System.out.println(nfa_read.recognizes("1*3") + "\n" + Integer.toString(nfa_read.len));
+            System.out.println(nfa_read.recognizes("12E-5") + "\n" + Integer.toString(nfa_read.len));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
