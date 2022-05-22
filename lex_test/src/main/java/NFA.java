@@ -87,7 +87,7 @@ public class NFA implements Serializable {
         for (int i = 0; i < txt.length(); i++) {
             //if (txt.charAt(i) == '*' || txt.charAt(i) == '|')// || txt.charAt(i) == '(' || txt.charAt(i) == ')')
             //    throw new IllegalArgumentException("text contains the metacharacter '" + txt.charAt(i) + "'");
-            if (i > 0 && (txt.charAt(i) == '(' || txt.charAt(i) == ')'))
+            if (((txt.charAt(i) == '(') && (!this.regexp.equals("("))) || ((txt.charAt(i) == ')') && (!this.regexp.equals(")"))))
                 break;
 
             Bag<Integer> match = new Bag<Integer>();
@@ -144,7 +144,8 @@ public class NFA implements Serializable {
         //var nfa=new NFA("\\\\\"(m|a)(a|i|n|\\\\\\)*\\\\\"");
         //var nfa=new NFA("\\\\\\n");
         //var nfa = new NFA("(1|2)\\\\*(3|4)");
-        var nfa = new NFA("(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*(|.(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)(((e|E)((+|-)|)(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)|)");
+        //var nfa = new NFA("(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*(|.(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)(((e|E)((+|-)|)(1|2|3|4|5|6|7|8|9|0)(1|2|3|4|5|6|7|8|9|0)*)|)");
+        var nfa = new NFA("\\\\(");
         try {
             var fos = new FileOutputStream("nfa_test.dat");
             var oos = new ObjectOutputStream(fos);
@@ -153,7 +154,7 @@ public class NFA implements Serializable {
             var fis = new FileInputStream("nfa_test.dat");
             var ios = new ObjectInputStream(fis);
             var nfa_read = (NFA) ios.readObject();
-            System.out.println(nfa_read.recognizes("12E-5") + "\n" + Integer.toString(nfa_read.len));
+            System.out.println(nfa_read.recognizes("(12E-5") + "\n" + Integer.toString(nfa_read.len));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

@@ -10,20 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6377e606-7c76-4b2a-803d-64e4461b1649" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/test_case/test.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/lex_test_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/lex_test_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NFAs.dat" beforeDir="false" afterPath="$PROJECT_DIR$/NFAs.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/lex_test_jar/lex_test.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/lex_test_jar/lex_test.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lexical_Analysis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NFA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lexical_Analysis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NFA.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_case/test.c" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/test.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../nfa_test.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../nfa_test.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/main/java/NFA.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/NFA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/lex.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/lex.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../target/classes/NFA.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/NFA.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -89,7 +89,7 @@
       <workItem from="1652271902416" duration="49000" />
       <workItem from="1652271967729" duration="681000" />
       <workItem from="1652276746277" duration="609000" />
-      <workItem from="1653221270800" duration="1250000" />
+      <workItem from="1653221270800" duration="2975000" />
     </task>
     <servers />
   </component>
